@@ -124,13 +124,15 @@
             // 
             // graficoBarras1
             // 
+            this.graficoBarras1.EjeX = "X";
+            this.graficoBarras1.EjeY = "F(X)";
             this.graficoBarras1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.graficoBarras1.Location = new System.Drawing.Point(307, 68);
             this.graficoBarras1.Modo = SolucionTema5.GraficoBarras.Ejes.AUTOMATICO;
             this.graficoBarras1.Name = "graficoBarras1";
             this.graficoBarras1.Size = new System.Drawing.Size(463, 370);
             this.graficoBarras1.TabIndex = 12;
-            this.graficoBarras1.TipoGrafica = SolucionTema5.GraficoBarras.Representacion.LINEAS;
+            this.graficoBarras1.TipoGrafica = SolucionTema5.GraficoBarras.Representacion.BARRAS;
             this.graficoBarras1.UseWaitCursor = true;
             // 
             // validateTextBox1
