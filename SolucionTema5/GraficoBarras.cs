@@ -30,14 +30,42 @@ namespace SolucionTema5
         private int contadorBrochas;
         public GraficoBarras()
         {
-            //valores = new List<double>();
-            valores = new double[] { 7, 5, 6, 2, 6, 12, 2, 5, 1, 2, 6, 9, 7, 14, 21, 14, 3 };
+            Valores = new double[] { 7, 5, 6, 2, 6, 12, 2, 5, 1, 2, 6, 9, 7, 14, 21, 14, 3 };
             InitializeComponent();
             valorMaximoY = valores.Max(); // tiene que ser igual a la altura
             brochas = new Brush[] { Brushes.LightGreen, Brushes.LightBlue, Brushes.Khaki };
             contadorBrochas = 0;
             intervaloY = (this.Height) / 10;
             intervaloX = (this.Width) / valores.Length;
+        }
+
+        public GraficoBarras(double[] valores, string nombre, string ejeX, string ejeY) : this()
+        {
+            Valores = valores;
+            Nombre = nombre;
+            EjeX = ejeX;
+            EjeY = ejeY;
+        }
+
+        [Category("Mis Propiedades")]
+        [Description("Nombre del gráfico")]
+        public string Nombre { set; get; }
+
+        [Category("Mis Propiedades")]
+        [Description("Los puntos de valor de la gráfica")]
+        public double[] Valores
+        {
+            set
+            {
+                valores = value;
+                valorMaximoY = valores.Max();
+                this.Refresh();
+            }
+
+            get
+            {
+                return valores;
+            }
         }
 
         [Category("Mis Propiedades")]
@@ -106,7 +134,7 @@ namespace SolucionTema5
             Graphics graphics = e.Graphics;
             contadorBrochas = 0;
             float contadorY = this.Height;
-            
+
 
             //graphics.DrawLine(new Pen(this.ForeColor), 0, this.Height, intervaloX, (float)(intervaloY * valores[0]));
 
@@ -131,7 +159,7 @@ namespace SolucionTema5
             graphics.DrawLine(new Pen(Color.Black, 3), 0, this.Height, this.Width, this.Height);
 
             // Etiquetas de ejes
-            graphics.DrawString(EjeX, this.Font, Brushes.Black, new PointF(this.Width - 50, this.Height - 30));
+            graphics.DrawString(EjeX, this.Font, Brushes.Black, new PointF(this.Width - 80, this.Height - 30));
             graphics.TranslateTransform(35, 0);
             graphics.RotateTransform(90);
             graphics.DrawString(EjeY, this.Font, Brushes.Black, new PointF(35, 0));

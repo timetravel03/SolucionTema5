@@ -130,10 +130,29 @@
             this.graficoBarras1.Location = new System.Drawing.Point(307, 68);
             this.graficoBarras1.Modo = SolucionTema5.GraficoBarras.Ejes.AUTOMATICO;
             this.graficoBarras1.Name = "graficoBarras1";
+            this.graficoBarras1.Nombre = null;
             this.graficoBarras1.Size = new System.Drawing.Size(463, 370);
             this.graficoBarras1.TabIndex = 12;
             this.graficoBarras1.TipoGrafica = SolucionTema5.GraficoBarras.Representacion.BARRAS;
             this.graficoBarras1.UseWaitCursor = true;
+            this.graficoBarras1.Valores = new double[] {
+        50D,
+        24D,
+        6D,
+        2D,
+        6D,
+        12D,
+        2D,
+        5D,
+        1D,
+        2D,
+        6D,
+        9D,
+        7D,
+        14D,
+        21D,
+        14D,
+        3D};
             // 
             // validateTextBox1
             // 
