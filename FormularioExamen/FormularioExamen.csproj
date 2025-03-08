@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B4AF8CD-8E16-407D-B0F3-E34544A52501}</ProjectGuid>
+    <ProjectGuid>{082C9D96-986D-4C26-B6F5-17B5EB95C9F9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PruebaComponentes</RootNamespace>
-    <AssemblyName>PruebaComponentes</AssemblyName>
+    <RootNamespace>FormularioExamen</RootNamespace>
+    <AssemblyName>FormularioExamen</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,10 +52,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sFriki.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,10 +93,6 @@
     <ProjectReference Include="..\ExamenEjemplo\ExamenEjemplo.csproj">
       <Project>{41B65BBD-0CCB-42B6-91A7-F24B558F1D00}</Project>
       <Name>ExamenEjemplo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SolucionTema5\NuevosComponentes.csproj">
-      <Project>{8788B719-5714-468F-8F36-9C907DEC8B6C}</Project>
-      <Name>NuevosComponentes</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

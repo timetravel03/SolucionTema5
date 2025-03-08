@@ -41,6 +41,7 @@
             this.controlMultimedia1 = new SolucionTema5.ControlMultimedia();
             this.etiquetaAviso1 = new SolucionTema5.EtiquetaAviso();
             this.labelTextBox1 = new NuevosComponentes.LabelTextBox();
+            this.validateTextBoxExamen1 = new ExamenEjemplo.ValidateTextBoxExamen();
             this.SuspendLayout();
             // 
             // button1
@@ -127,7 +128,8 @@
             this.graficoBarras1.EjeX = "X";
             this.graficoBarras1.EjeY = "F(X)";
             this.graficoBarras1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.graficoBarras1.Location = new System.Drawing.Point(307, 68);
+            this.graficoBarras1.Location = new System.Drawing.Point(299, 69);
+            this.graficoBarras1.Margin = new System.Windows.Forms.Padding(2);
             this.graficoBarras1.Modo = SolucionTema5.GraficoBarras.Ejes.AUTOMATICO;
             this.graficoBarras1.Name = "graficoBarras1";
             this.graficoBarras1.Nombre = null;
@@ -223,10 +225,24 @@
             this.labelTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.labelTextBox1_KeyPress);
             this.labelTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.labelTextBox1_KeyUp);
             // 
+            // validateTextBoxExamen1
+            // 
+            this.validateTextBoxExamen1.Location = new System.Drawing.Point(476, 159);
+            this.validateTextBoxExamen1.Margin = new System.Windows.Forms.Padding(2);
+            this.validateTextBoxExamen1.Multilinea = false;
+            this.validateTextBoxExamen1.Name = "validateTextBoxExamen1";
+            this.validateTextBoxExamen1.Size = new System.Drawing.Size(138, 42);
+            this.validateTextBoxExamen1.TabIndex = 13;
+            this.validateTextBoxExamen1.Texto = "";
+            this.validateTextBoxExamen1.Tipo = ExamenEjemplo.ValidateTextBoxExamen.eTipo.TEXTUAL;
+            this.validateTextBoxExamen1.UseWaitCursor = true;
+            this.validateTextBoxExamen1.Load += new System.EventHandler(this.validateTextBoxExamen1_Load);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(782, 450);
+            this.Controls.Add(this.validateTextBoxExamen1);
             this.Controls.Add(this.graficoBarras1);
             this.Controls.Add(this.validateTextBox1);
             this.Controls.Add(this.dibujoAhorcado1);
@@ -265,6 +281,7 @@
         private SolucionTema5.DibujoAhorcado dibujoAhorcado1;
         private SolucionTema5.ValidateTextBox validateTextBox1;
         private SolucionTema5.GraficoBarras graficoBarras1;
+        private ExamenEjemplo.ValidateTextBoxExamen validateTextBoxExamen1;
     }
 }
 

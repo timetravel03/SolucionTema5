@@ -51,8 +51,7 @@ namespace ProgramaGraficos
                 {
                     if (item.Contains(".xml")) // se podría hacer mejor...
                     {
-                        GraficoBarras gfx = LectorXml(item);
-                        listaGraficas.Add(gfx);
+                        listaGraficas = LectorXml(item);
                     }
                 }
                 DistrubuidorGraficas();
@@ -100,8 +99,9 @@ namespace ProgramaGraficos
             }
         }
 
-        private GraficoBarras LectorXml(string ruta)
+        private List<GraficoBarras> LectorXml(string ruta)
         {
+            List<GraficoBarras> leidosDeArchivo = new List<GraficoBarras>();
             try
             {
                 List<double> datos = new List<double>();
@@ -109,18 +109,31 @@ namespace ProgramaGraficos
                 doc.Load(ruta);
                 // eje y -> elemento raiz : nombre -> atributo tipo raiz : eje x -> nombre nodos hijos : dato -> texto
                 // permite rutas al estilo linux???
-                XmlNodeList nodeList = doc.FirstChild.ChildNodes;
-                string nombre = doc.FirstChild.Attributes.GetNamedItem("nombre").FirstChild.Value.Trim();
-                string ejeY = doc.FirstChild.Name.Trim();
-                string ejeX = doc.FirstChild.FirstChild.Name.Trim();
-                for (int i = 0; i < nodeList.Count; i++)
+
+                XmlNodeList nodeList = doc.FirstChild.ChildNodes; // listas de datos
+
+                foreach (XmlNode item in nodeList)
                 {
-                    XmlNode node = nodeList[i];
-                    // hay que coger el valor del primer hijo (nodo de texto) como en AD
-                    datos.Add(double.Parse(node.FirstChild.Value.Trim()));
+                    datos.Clear();
+
+                    XmlNodeList nodosDatos = item.ChildNodes;
+                    string nombre = item.Attributes.GetNamedItem("nombre").FirstChild.Value.Trim();
+                    string ejeY = item.Name.Trim();
+                    string ejeX = item.FirstChild.Name.Trim();
+
+                    for (int i = 0; i < nodosDatos.Count; i++)
+                    {
+                        XmlNode node = nodosDatos[i];
+                        // hay que coger el valor del primer hijo (nodo de texto) como en AD
+                        datos.Add(double.Parse(node.FirstChild.Value.Trim()));
+                    }
+
+                    leidosDeArchivo.Add(new GraficoBarras(datos.ToArray(), nombre, ejeX, ejeY));
                 }
+
                 Console.WriteLine("Lectura XML finalizada");
-                return new GraficoBarras(datos.ToArray(), nombre, ejeX, ejeY);
+
+                return leidosDeArchivo;
             }
             catch (IOException)
             {
@@ -224,6 +237,11 @@ namespace ProgramaGraficos
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             GuardarDatosDeConfiguracion();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

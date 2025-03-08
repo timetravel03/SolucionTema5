@@ -111,5 +111,10 @@ namespace PruebaComponentes
         {
 
         }
+
+        private void validateTextBoxExamen1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
