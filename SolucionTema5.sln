@@ -9,13 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaComponentes", "Prueba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppControlMultimediaTest", "AppControlMultimediaTest\AppControlMultimediaTest.csproj", "{2F6BDEA0-C1E3-409D-944D-1531E1672732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhorcadoEJ4", "AhorcadoEJ4\AhorcadoEJ4.csproj", "{E6354A90-6E29-4647-AD43-C63C924CFF88}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramaGraficos", "ProgramaGraficos\ProgramaGraficos.csproj", "{AF816E53-7556-4583-BFB0-8C5B104DB6BC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamenEjemplo", "ExamenEjemplo\ExamenEjemplo.csproj", "{41B65BBD-0CCB-42B6-91A7-F24B558F1D00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormularioExamen", "FormularioExamen\FormularioExamen.csproj", "{082C9D96-986D-4C26-B6F5-17B5EB95C9F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahorcado", "AhorcadoEJ4\Ahorcado.csproj", "{E6354A90-6E29-4647-AD43-C63C924CFF88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,6 @@ Global
 		{2F6BDEA0-C1E3-409D-944D-1531E1672732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F6BDEA0-C1E3-409D-944D-1531E1672732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F6BDEA0-C1E3-409D-944D-1531E1672732}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6354A90-6E29-4647-AD43-C63C924CFF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6354A90-6E29-4647-AD43-C63C924CFF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6354A90-6E29-4647-AD43-C63C924CFF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6354A90-6E29-4647-AD43-C63C924CFF88}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF816E53-7556-4583-BFB0-8C5B104DB6BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AF816E53-7556-4583-BFB0-8C5B104DB6BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF816E53-7556-4583-BFB0-8C5B104DB6BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{082C9D96-986D-4C26-B6F5-17B5EB95C9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{082C9D96-986D-4C26-B6F5-17B5EB95C9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{082C9D96-986D-4C26-B6F5-17B5EB95C9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6354A90-6E29-4647-AD43-C63C924CFF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6354A90-6E29-4647-AD43-C63C924CFF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6354A90-6E29-4647-AD43-C63C924CFF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6354A90-6E29-4647-AD43-C63C924CFF88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

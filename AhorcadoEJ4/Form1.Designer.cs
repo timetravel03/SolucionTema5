@@ -95,6 +95,7 @@
             this.dibujoAhorcado1.Text = "dibujoAhorcado1";
             this.dibujoAhorcado1.CambiaError += new System.EventHandler(this.dibujoAhorcado1_CambiaError);
             this.dibujoAhorcado1.Ahorcado += new System.EventHandler(this.dibujoAhorcado1_Ahorcado);
+            
             // 
             // Form1
             // 

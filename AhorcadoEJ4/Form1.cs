@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SolucionTema5;
 
 namespace AhorcadoEJ4
 {
@@ -47,10 +48,6 @@ namespace AhorcadoEJ4
 
             CreaBotones();
             CreaTextBoxes();
-#if !DEBUG
-            btnMas.Enabled = false;
-            btnMenos.Enabled = false;
-#endif
         }
 
         private void CreaBotones()
